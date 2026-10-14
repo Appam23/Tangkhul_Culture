@@ -513,8 +513,17 @@ main {
   object-position: center;
   display: block;
 }
+
+.card-image img[src$="images12.png"] {
+  transform: scale(1.2);
+}
+
 .culture-card:hover .card-image img {
   transform: scale(1.06);
+}
+
+.culture-card:hover .card-image img[src$="images12.png"] {
+  transform: scale(1.272);
 }
 
 .card-content {
