@@ -597,10 +597,7 @@ main {
       rgba(15, 53, 40, 0.91),
       rgba(15, 53, 40, 0.91)
     ),
-    url("images/tangkhul-header.jpg")
-    center / cover no-repeat;
-
-  color: white;
+  
 }
 
 
@@ -896,4 +893,111 @@ footer {
     min-height: 450px;
   }
 
+}
+/* ===== NATURE EXPLORER ===== */
+
+.nature-explorer {
+  width: min(1100px, 92%);
+  margin: 3rem auto;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid #c8dacf;
+  border-radius: 16px;
+  background: #f2f7f3;
+  color: #173d2c;
+}
+
+.nature-explorer h2 {
+  margin-top: 0;
+  color: #173d2c;
+}
+
+.nature-explorer form {
+  margin: 1.5rem 0;
+}
+
+.nature-explorer label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+  font-weight: bold;
+}
+
+.nature-explorer input,
+.nature-explorer select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 0.8rem;
+  border: 1px solid #728b7c;
+  border-radius: 8px;
+  background: white;
+  color: #173d2c;
+  font: inherit;
+}
+
+.nature-explorer button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #215c43;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.nature-explorer button:hover {
+  background: #173d2c;
+}
+
+.nature-explorer button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.nature-explorer :focus-visible {
+  outline: 3px solid #a95400;
+  outline-offset: 3px;
+}
+
+/* ===== NATURE RESULT CARDS ===== */
+
+#nature-results {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 240px), 1fr)
+  );
+  gap: 1.5rem;
+}
+
+.nature-card {
+  overflow: hidden;
+  border: 1px solid #c8dacf;
+  border-radius: 12px;
+  background: white;
+}
+
+.nature-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.nature-card-content {
+  padding: 1rem;
+}
+
+.nature-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.nature-card a {
+  color: #215c43;
+  text-decoration: underline;
+}
+
+.nature-photo-credit {
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
 }
