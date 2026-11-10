@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore plants and wildlife observed in Ukhrul, Manipur, and other places.">
+  <title>Nature Explorer | Tangkhul Culture</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="nature.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Tangkhul</a>
+
+      <div class="nav-links">
+        <a href="index.html#culture">Culture</a>
+        <a href="index.html#heritage">Heritage</a>
+        <a href="index.html#about">About</a>
+        <a href="nature.html" aria-current="page">Nature Explorer</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="nature-explorer" aria-labelledby="nature-heading">
+      <h1 id="nature-heading">Explore Our Natural Heritage</h1>
+
+      <p>
+        Discover plants and wildlife observed in Ukhrul, Manipur,
+        and other places.
+      </p>
+
+      <form id="nature-place-form">
+        <label for="nature-place-search">Search for a place</label>
+
+        <input
+          type="search"
+          id="nature-place-search"
+          placeholder="For example: Manipur"
+          minlength="2"
+          required
+        >
+
+        <button type="submit">Search places</button>
+      </form>
+
+      <form id="nature-identification-form" hidden>
+        <label for="nature-place-select">Select a place</label>
+        <select id="nature-place-select" required></select>
+
+        <label for="nature-start-date">Observed from (optional)</label>
+        <input type="date" id="nature-start-date">
+
+        <label for="nature-end-date">Observed through (optional)</label>
+        <input type="date" id="nature-end-date">
+
+        <button type="submit">Find plants and wildlife</button>
+      </form>
+
+      <p id="nature-status" role="status" aria-live="polite">
+        Search for a place to explore its plants and wildlife.
+      </p>
+
+      <div id="nature-results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <h2>My Tangkhul Culture</h2>
+      <p>Celebrating Tangkhul heritage, identity, and community.</p>
+      <div class="footer-line"></div>
+      <p class="copyright">
+        © 2026 My Tangkhul Culture. Created to celebrate cultural heritage.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

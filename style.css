@@ -611,7 +611,7 @@ main {
 
 
 .heritage-section h2 {
-  color: white;
+  color: rgb(18, 18, 18);
 }
 
 
@@ -620,7 +620,7 @@ main {
 
   margin: 0 auto 30px;
 
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(10, 10, 10, 0.85);
 }
 
 
@@ -897,13 +897,14 @@ footer {
 /* ===== NATURE EXPLORER ===== */
 
 .nature-explorer {
-  width: min(1100px, 92%);
+  width: 100%;
   margin: 3rem auto;
   padding: clamp(1rem, 4vw, 2rem);
   border: 1px solid #c8dacf;
   border-radius: 16px;
   background: #f2f7f3;
   color: #173d2c;
+  text-align: center;
 }
 
 .nature-explorer h2 {
@@ -912,13 +913,15 @@ footer {
 }
 
 .nature-explorer form {
-  margin: 1.5rem 0;
+  width: min(100%, 520px);
+  margin: 1.5rem auto;
 }
 
 .nature-explorer label {
   display: block;
   margin: 1rem 0 0.4rem;
   font-weight: bold;
+  text-align: left;
 }
 
 .nature-explorer input,
@@ -945,6 +948,10 @@ footer {
   cursor: pointer;
 }
 
+#nature-status {
+  text-align: center;
+}
+
 .nature-explorer button:hover {
   background: #173d2c;
 }
@@ -963,11 +970,8 @@ footer {
 
 #nature-results {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, 240px), 1fr)
-  );
-  gap: 1.5rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .nature-card {
@@ -1000,4 +1004,16 @@ footer {
 .nature-photo-credit {
   font-size: 0.8rem;
   overflow-wrap: anywhere;
+}
+
+@media (max-width: 1200px) {
+  #nature-results {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #nature-results {
+    grid-template-columns: 1fr;
+  }
 }
