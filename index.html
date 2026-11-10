@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="style.css">
   <script type="module" src="script.js"></script>
+  <script type="module" src="nav.js"></script>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +83,14 @@
         Tangkhul
       </a>
 
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Open navigation menu</span>
+      </button>
+
+      <div class="nav-links" id="primary-navigation">
         <a href="#culture">Culture</a>
         <a href="#heritage">Heritage</a>
         <a href="#about">About</a>

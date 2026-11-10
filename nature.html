@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="style.css">
   <script type="module" src="nature.js"></script>
+  <script type="module" src="nav.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,14 @@
     <div class="nav-container">
       <a href="index.html" class="nav-logo">Tangkhul</a>
 
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Open navigation menu</span>
+      </button>
+
+      <div class="nav-links" id="primary-navigation">
         <a href="index.html#culture">Culture</a>
         <a href="index.html#heritage">Heritage</a>
         <a href="index.html#about">About</a>
